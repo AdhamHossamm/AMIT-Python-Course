@@ -11,6 +11,13 @@ body {
   padding-top: 120px;
 }
 
+#top-anchor {
+  position: absolute;
+  top: 0;
+  height: 120px;
+  width: 100%;
+}
+
 header {
   background: #333;
   color: white;
@@ -33,9 +40,11 @@ header {
   border-radius: 30px;
   font-size: 14px;
 }
+
 section {
-    margin-top: 50px;
+  margin-top: 50px;
 }
+
 #cards {
   padding: 40px 20px;
   display: flex;
