@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Call of Duty: Black Ops 7</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  
+  <audio id="bgMusic" src="assets/audio/music.mp3" autoplay loop></audio>
+  <button id="musicToggle" class="music-toggle">🔇</button>
+
+  
+  <nav class="navbar">
+    <div class="container nav-inner">
+      <span class="logo">BLACK OPS 7</span>
+      <button class="menu-icon">☰</button>
+    </div>
+  </nav>
+
+
+  <section id="hero">
+    <div class="hero-overlay">
+      <h1>ENTER THE FRONTLINE</h1>
+      <p>Next-gen covert ops. Unmatched mayhem.</p>
+      <a href="#features" class="btn btn-primary">Explore More</a>
+    </div>
+  </section>
+
+ 
+  <div class="after-hero">
+
+
+    <section id="features" class="container section">
+      <h2 class="section-title">New Arsenal &amp; Operators</h2>
+      <div class="cards">
+
+        <div class="card weapon-card">
+          <h3>New Weapon</h3>
+          <p class="card-sub">AEK-973 &gt;</p>
+          <div class="card-img">
+            <img src="https://imagedelivery.net/BN5t48p9frV5wW3Jpe6Ujw/aek-973-with-attachments/gunFullDisplay" alt="AEK-973 Weapon">
+          </div>
+        </div>
+
+        <div class="card operator-card">
+          <h3>Elite Operators</h3>
+          <p class="card-sub">Stasis Skin &gt;</p>
+        </div>
+      </div>
+    </section>
+
+    <div class="divider"></div>
+
+
+    <section id="bundles" class="container section">
+      <h2 class="section-title">Purchase Bundles</h2>
+      <div class="table-wrap">
+        <table class="bundle-table">
+          <thead>
+            <tr><th>Bundle</th><th>Rarity</th><th>Price</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Starter Pack</td><td>Common</td><td>$5</td></tr>
+            <tr><td>Elite Bundle</td><td>Rare</td><td>$20</td></tr>
+            <tr><td>Legendary Set</td><td>Epic</td><td>$50</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <div class="divider"></div>
+
+
+    <section id="trailer" class="container section">
+      <h2 class="section-title">Official Teaser</h2>
+      <div class="video-wrapper">
+        <iframe src="https://www.youtube.com/embed/uUo5gnaYB_w"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen>
+        </iframe>
+      </div>
+    </section>
+
+    <div class="divider"></div>
+
+
+    <section id="intel" class="container section">
+      <h2 class="section-title">Get the Latest Intel</h2>
+      <form id="intelForm" class="intel-form">
+        <div class="field-group">
+          <div class="field">
+            <label for="intel-name">Name<span class="required">*</span></label>
+            <input type="text" id="intel-name" name="name" placeholder="Codename" required />
+          </div>
+          <div class="field">
+            <label for="intel-email">Email<span class="required">*</span></label>
+            <input type="email" id="intel-email" name="email" placeholder="you@host.com" required />
+          </div>
+        </div>
+        <div class="field">
+          <label for="intel-bundle">Bundle<span class="required">*</span></label>
+          <select id="intel-bundle" name="bundle" required>
+            <option value="">Select a bundle</option>
+            <option>Starter Pack</option>
+            <option>Elite Bundle</option>
+            <option>Legendary Set</option>
+          </select>
+        </div>
+        <div class="checkbox-field">
+          <input type="checkbox" id="intel-tos" name="tos" required />
+          <label for="intel-tos">I agree to the <a href="#">Terms</a><span class="required">*</span></label>
+        </div>
+        <input type="hidden" id="hidden_input" name="hidden_input" />
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+    </section>
+
+
+    <footer class="container footer">
+      <p>&copy; 2025 Activision Publishing, Inc.</p>
+    </footer>
+
+  </div>
+
+  <!-- SCRIPT (testing auto play)-->
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const music  = document.getElementById('bgMusic'),
+            toggle = document.getElementById('musicToggle'),
+            form   = document.getElementById('intelForm'),
+            hidden = document.getElementById('hidden_input');
+
+      toggle.addEventListener('click', () => {
+        if (music.paused) {
+          music.play();
+          toggle.textContent = '🔊';
+        } else {
+          music.pause();
+          toggle.textContent = '🔇';
+        }
+      });
+      // Testing Hidden Field concatenation (Testing:Update working)
+      form.addEventListener('submit', () => {
+        const e = document.getElementById('intel-email').value.trim(),
+              b = document.getElementById('intel-bundle').value.trim();
+        hidden.value = `${e} | ${b}`;
+      });
+    });
+  </script>
+
+</body>
+</html>

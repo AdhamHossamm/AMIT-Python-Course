@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  background-color: #ffffff;
+  width: 100%;
+}
+
+.navbar {
+  width: 100%;
+  background-color: #2f2f2f;
+  padding: 30px 0;
+  margin-bottom: 50px;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 80px;
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+
+.nav-links li {
+  position: relative;
+}
+
+.nav-links li a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav-links li a:hover {
+  color: #c22b2b;
+}
+
+.submenu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #d86f6f;
+  padding: 10px 0;
+  border-radius: 4px;
+  min-width: 160px;
+  z-index: 10;
+  flex-direction: column;
+}
+
+.submenu li {
+  padding: 8px 20px;
+  list-style: none;
+}
+
+.submenu li a {
+  color: white;
+  font-size: 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.submenu li a:hover {
+  background-color: #444;
+  color: #c22b2b;
+}
+
+.nav-links li:hover .submenu {
+  display: block;
+}
+
+.content {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 40px;
+  padding: 80px 20px 40px;
+  flex-wrap: wrap;
+}
+
+.container-main {
+  width: 100%;
+  padding: 20px;
+  display: flex;
+  flex-direction: row;
+  gap: 50px;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.product-card {
+  width: 280px;
+  background-color: white;
+  border: 1px solid #ffe4e4;
+  border-radius: 12px;
+  padding: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.container-main img {
+  width: 350px;
+  height: 270px;
+}
+
+.product-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.15);
+}
+
+.product-card img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+.product-card h2 {
+  font-size: 20px;
+  margin: 12px 0 6px;
+  font-weight: 700;
+}
+
+.product-card p {
+  font-size: 14px;
+  color: #777;
+  margin-bottom: 10px;
+}
+
+.price {
+  color: green;
+  font-weight: 600;
+  font-size: 18px;
+}
