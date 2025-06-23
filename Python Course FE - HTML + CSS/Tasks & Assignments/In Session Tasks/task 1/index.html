@@ -1,20 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Card</title>
-    <link rel="stylesheet" href="css/style.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My CSS Profile Card</title>
+
+    <style>
+      body {
+        background-color: #f0f0f0;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        color: #222;
+      }
+    </style>
+
+    <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
+    <h1 style="color: red; font-size: 32px; font-weight: bold">
+      My CSS Profile Card
+    </h1>
 
-  <div class = "profile-card">
-      <h1  class="profile-name"> Adam Hossam </h1>
-     <p class="profile-bio">
-     I'm a creative thinker with a passion for technology, AI,
-     and innovation. Let's build the future.
-     </p>
-  </div>
-
+    <div class="card">
+      <img
+        src="assets/profile-pic.jpeg"
+        class="avatar"
+        alt="Profile picture"
+      />
+      <h2 id="name">Adam Hossam</h2>
+      <p class="bio">
+        I'm a creative thinker with a passion for technology, AI, and innovation.
+        Let's build the future together.
+      </p>
+      <p class="quote">“Learning never exhausts the mind.”</p>
+    </div>
   </body>
 </html>
