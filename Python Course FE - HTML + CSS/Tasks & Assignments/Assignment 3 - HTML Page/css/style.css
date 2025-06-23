@@ -1,0 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+@font-face {
+    font-family: "Lucida Calligraphy";
+    src: url("/assets/fonts/Lucida Calligraphy Font.ttf");
+}
+
+
+p, div, span {
+    font-family: "Lucida Calligraphy";
+}
+
+#header {
+    text-align: center;
+}
+
+
