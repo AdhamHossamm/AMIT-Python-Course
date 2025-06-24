@@ -40,7 +40,7 @@ body {
   list-style: none;
 }
 
-.nav-links li + li {
+.nav-links li   {
   border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
 
@@ -60,7 +60,7 @@ body {
   height: 100%;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 500px) {
   body {
     padding: 0;
     background: #ffffff;
