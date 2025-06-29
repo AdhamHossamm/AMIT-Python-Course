@@ -34,6 +34,7 @@ body {
   border-radius: 4px;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
   padding: 16px;
+  
 }
 .profile {
   text-align: center;
@@ -182,6 +183,7 @@ body {
 .no {
   background: #e57373;
 }
+
 .ads {
   height: 120px;
   display: flex;
