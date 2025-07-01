@@ -1,13 +1,19 @@
-let name = prompt("Enter your name:");
-let age = prompt("Enter your age:");
+let userName = prompt("Step 1) Enter your Name (Example: Adham):");
+let birthYear = prompt("Step 2) Enter your Year of Birth (Example: 2000):");
 
-console.log("Name:", name);
-console.log("Age:", age);
+console.log("userName:", userName);
+console.log("Year of Birth:", birthYear);
+console.log("Type of userName:", typeof userName);
+console.log("Type of birthYear (before conversion):", typeof birthYear);
 
-// Show types
-console.log("Type of name:", typeof name);
-console.log("Type of age (before conversion):", typeof age);
+let birthYearNumber = Number(birthYear);
+let currentAge = 2025 - birthYearNumber;
 
-// Convert age to number (da test men stackoverflow)
-let ageNumber = Number(age);
-console.log("Type of age (after conversion):", typeof ageNumber);
+console.log("Type of birthYear (after conversion):", typeof birthYearNumber);
+console.log("Calculated Age in 2025:", currentAge);
+
+if (currentAge >= 18) {
+  console.log("You are eligible to vote.");
+} else {
+  console.log("You are NOT eligible to vote because you are below 18 years old.");
+}
