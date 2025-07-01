@@ -15,5 +15,5 @@ console.log("Calculated Age in 2025:", currentAge);
 if (currentAge >= 18) {
   console.log("You are eligible to vote.");
 } else {
-
+  console.log("You are NOT eligible to vote because you are below 18 years old.");
 }
