@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Product Details</title>
+  <script src="js/script/product-function.js"></script>
+</head>
+<body>
+
+  <h1>Product Details</h1>
+  <div id="product" class="product-details"></div>
+
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script>
+    const productContainer = document.getElementById("product");
+    const id = window.location.search.split("=")[1];
+
+    async function getSingleProduct() {
+      try {
+        const res = await axios.get(`https://dummyjson.com/products/${id}`);
+        const product = res.data;
+        productContainer.innerHTML = renderProductCard(product);
+      } catch (error) {
+        console.log(error);
+      }
+    }
+
+    getSingleProduct();
+  </script>
+
+</body>
+</html>

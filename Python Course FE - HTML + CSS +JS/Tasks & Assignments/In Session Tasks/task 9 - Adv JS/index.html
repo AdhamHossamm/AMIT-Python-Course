@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Products</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <h1>All Products</h1>
+  <div id="products" class="products"></div>
+
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+  <script>
+    const productsList = document.getElementById("products");
+
+    function renderProductCard(product, count) {
+      return `
+        <div class="product">
+          <h2>Product ${count}</h2>
+          <h3>${product.title}</h3>
+          <img src="${product.thumbnail}">
+          <p>${product.description}</p>
+          <p>Price: $${product.price}</p>
+          <p>Category: ${product.category}</p>
+          <p>Rating: ${product.rating}</p>
+          <a href="product-details.html?id=${product.id}">
+            <button>View Product</button>
+          </a>
+        </div>
+      `;
+    }
+
+    async function fetchProducts() {
+      try {
+        const res = await axios.get("https://dummyjson.com/products");
+
+        let count = 1;
+        res.data.products.forEach(function(item) {
+          if (item.category !== "fragrances" && item.category !== "beauty") {
+            productsList.innerHTML += renderProductCard(item, count);
+            count++;
+          }
+        });
+
+      } catch (error) {
+        console.log(error);
+      }
+    }
+
+    fetchProducts();
+  </script>
+
+</body>
+</html>
